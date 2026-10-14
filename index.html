@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header class="header">
+            <div class="logo">✓</div>
+            <h1>My To-Do List</h1>
+            <p>Plan your day, one task at a time.</p>
+        </header>
+
+        <form id="task-form" class="task-form">
+            <input
+                type="text"
+                id="task-input"
+                placeholder="What do you need to do?"
+                maxlength="150"
+                autocomplete="off"
+                aria-label="Enter a new task"
+            >
+            <button type="submit" class="add-btn">+ Add</button>
+        </form>
+
+        <p id="message" class="message" role="status"></p>
+
+        <section class="task-section">
+            <div class="task-heading">
+                <h2>Your Tasks</h2>
+                <span id="task-count">0 tasks left</span>
+            </div>
+
+            <div class="filters">
+                <button type="button" class="filter active" data-filter="all">
+                    All
+                </button>
+                <button type="button" class="filter" data-filter="active">
+                    Pending
+                </button>
+                <button type="button" class="filter" data-filter="completed">
+                    Completed
+                </button>
+            </div>
+
+            <ul id="task-list" class="task-list"></ul>
+
+            <div id="empty-state" class="empty-state">
+                <div class="empty-icon">📝</div>
+                <h3>No tasks yet</h3>
+                <p>Add a task above to get started!</p>
+            </div>
+
+            <div class="footer">
+                <span id="completed-count">0 completed</span>
+                <button type="button" id="clear-completed" class="clear-btn">
+                    Clear completed
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
